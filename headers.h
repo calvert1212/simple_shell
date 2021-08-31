@@ -34,18 +34,15 @@ void _prompt(void);
 void _print_environ(void);
 int _exec(char **array);
 int _strlen(char *s);
-void _stopcc(int sig);
+void _stopctrlc(int sig);
 char *_strcp(char *strin);
-char *_strtok(char *s1, const char *s2);
 int _strcmp(char *s1, char *s2);
 char *_strcpy(char *dest, char *src);
-char *_get_env(char *envar);
-void pathfinder(char **array);
+char *_get_environ(char *envar);
+void find_path(char **array);
 char *_strcat_w_slash(char *a, char *b);
-void free_3(char *p1, char *p2, char *p3);
 char *_strdup(char *s1);
 char *_strcat(char *dest, char *src);
 char *_strindup(char *s1, int dex);
-int _strincmp(char *s1, char *s2, int x);
 
 #endif
