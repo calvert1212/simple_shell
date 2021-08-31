@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include "headers.h"
 
 /**
  * find_path - handles the path

@@ -1,4 +1,5 @@
 #include "stopctrlc.h"
+#include "headers.h"
 
 /**
  * _stopctrlc - Stops exit on Ctrl C
