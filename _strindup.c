@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "headers.h"
 
 /**
  * _strindup - makes a duplicate of a string with malloc

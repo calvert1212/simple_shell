@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "headers.h"
 
 /**
  * _stopcc - Stops exit on Ctrl C
