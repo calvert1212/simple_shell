@@ -31,7 +31,7 @@ typedef struct binType
 
 char **_parse(char *cmd, char *del);
 void _prompt(void);
-void _print_env(void);
+void _print_environ(void);
 int _exec(char **array);
 int _strlen(char *s);
 void _stopcc(int sig);
@@ -40,7 +40,7 @@ char *_strtok(char *s1, const char *s2);
 int _strcmp(char *s1, char *s2);
 char *_strcpy(char *dest, char *src);
 char *_get_environ(char *envar);
-void pathfinder(char **array);
+void find_path(char **array);
 char *_strcat_w_slash(char *a, char *b);
 char *_strdup(char *s1);
 char *_strcat(char *dest, char *src);

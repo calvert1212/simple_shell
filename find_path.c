@@ -30,11 +30,11 @@ void find_path(char **array)
 	{
 		free(array[0]);
 		array[0] = _strdup(string);
-			for (i = 0; path[i] != NULL; i++)
-				free(path[i]);
-				free(path);
-				free(string);
-					return;
+		for (i = 0; path[i] != NULL; i++)
+			free(path[i]);
+		free(path);
+		free(string);
+		return;
 	}
 	i++;
 	free(string);
@@ -42,5 +42,5 @@ void find_path(char **array)
 	}
 	for (i = 0; path[i] != NULL; i++)
 		free(path[i]);
-		free(path);
+	free(path);
 }

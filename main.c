@@ -19,7 +19,7 @@ int main(void)
 	{
 	i = 0;
 	if (isatty(STDIN_FILENO))
-	prompt();
+		_prompt();
 	signal(SIGINT, _stopctrlc);
 	inputstr = getline(&command, &n, stdin);
 	if (inputstr == EOF)
@@ -37,7 +37,7 @@ int main(void)
 	}
 	if (_strcmp(array[0], "env") == 0)
 	{
-		_print_environ()
+		_print_environ();
 		while (array[i])
 		free(array[i++]);
 		free(array);
