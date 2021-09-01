@@ -5,7 +5,7 @@
  * @array: input string
  */
 
-void pathfinder(char **array)
+void find_path(char **array)
 {
   struct stat st;
   char *string, **path;
@@ -15,7 +15,7 @@ void pathfinder(char **array)
     return;
   if (stat(array[0], &st) == 0)
     return;
-  string = _get_env("PATH=");
+  string = _get_environ("PATH=");
   path = _parse(string, ":");
   free(string);
   string = NULL;

@@ -18,7 +18,7 @@ char *_get_environ(char *envar)
     x++;
   if (environ[x])
     {
-      envs = _strdup(environ[x], l + 1);
+      envs = _strindup(environ[x], l + 1);
       return (envs);
     }
   return (NULL);
