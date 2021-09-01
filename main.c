@@ -50,3 +50,4 @@ int main(void)
 	}
 	free(command);
 	return (exitcde);
+}

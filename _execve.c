@@ -6,7 +6,7 @@
  * Return: the exit code of command
  */
 
-int _exec(char **array)
+int _execve(char **array)
 {
 	int cpid = 0, exitcode = 0, status;
 
