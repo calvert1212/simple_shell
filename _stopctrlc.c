@@ -8,6 +8,7 @@
  */
 void _stopctrlc(int signal)
 {
-  (void) signal;
-  write(STDOUT_FILENO, "\n$ ", 3);
+	(void) signal;
+
+	write(STDOUT_FILENO, "\n$ ", 3);
 }
