@@ -18,6 +18,7 @@
 extern char **environ;
 
 /**
+<<<<<<< HEAD
  *  * struct binType - builtin structure
  *   * @binName: name of builtin
  *    * @func: bin function to call
@@ -27,6 +28,17 @@ typedef struct binType
 {
 	  char *binName;
 	    int (*func)();
+=======
+ * struct binType - builtin structure
+ * @binName: name of builtin
+ * @func: bin function to call
+ */
+
+typedef struct binType
+{
+  char *binName;
+  int (*func)();
+>>>>>>> master
 } binType;
 
 char **_parse(char *cmd, char *del);
