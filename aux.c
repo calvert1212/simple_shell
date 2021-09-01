@@ -7,11 +7,11 @@
  */
 void _free(char **str)
 {
-  int x = 0;
+	int x = 0;
 
-  while (str[x])
-    free(str[x++]);
-  free(str);
+	while (str[x])
+		free(str[x++]);
+	free(str);
 }
 /**
  * _strlen - Returns input string length
@@ -21,9 +21,9 @@ void _free(char **str)
  */
 int _strlen(char *s)
 {
-  int x = 0;
+	int x = 0;
 
-  while (s[x] != '\0')
-    x++;
-  return (x);
+	while (s[x] != '\0')
+		x++;
+	return (x);
 }
