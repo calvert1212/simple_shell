@@ -1,6 +1,5 @@
 #include "headers.h"
 
-
 /**
  * _exec - calles execve on command
  * @array: the string

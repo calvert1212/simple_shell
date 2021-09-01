@@ -1,4 +1,3 @@
-#include "stopctrlc.h"
 #include "headers.h"
 
 /**

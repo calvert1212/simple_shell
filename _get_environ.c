@@ -14,7 +14,7 @@ char *_get_environ(char *envar)
 
   if (!environ || !*envar)
     return (NULL);
-  while (environ[x] && (_strcmp(envar, environ[x], l)))
+ while (environ[x] && (_strincmp (envar, environ[x], l)))
     x++;
   if (environ[x])
     {
