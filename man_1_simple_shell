@@ -8,7 +8,7 @@
 .PP
 
 .SH Description
-A simplified CLI, akin to any other standard Linux shell. Can run in interactive and non-interactive mode. Non-interactive mode enables scripting and pipes.
+A much simplified CLI, akin to any other standard Linux shell. Can run in interactive and non-interactive mode. Non-interactive mode enables scripting and pipes.
 
 .SH OVERVIEW
 simple_shell takes, pipes, interprets and executes commands from files and the command line.
