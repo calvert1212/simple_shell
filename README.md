@@ -1,4 +1,4 @@
-Rocko Gilbert and Calvin's simple shell project!
+Rocko Gilbert and C Calvert's simple shell project!
 
 Much like the bash program found on almost all linux/unix systems, this shell works in both interactive and non-interactive mode. It serves as a command line interface terminal to interact with your computer. For more details on functionality, please reference man(bash).
 
