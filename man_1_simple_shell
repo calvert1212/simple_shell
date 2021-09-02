@@ -21,7 +21,7 @@ To compile and run simple_shell, please enter the following into your existing s
 .B gcc -Wall -Werror -Wextra -pedantic *.c -o hsh
 .P
 .RE
-After compilation, simply enter the following to run holbash:
+After compilation, simply enter the following to run simple_shell:
 .P
 .RS
 .B ./hsh
@@ -44,7 +44,8 @@ Non-interactive mode is also supported, along with piping and scripting. Please 
 
 .SH BUGS
 None, less functionality than a normal shell
-.SH AUTHOR
+.SH AUTHORS
 Rocko Gilbert <evolve2122@egmail.com>
+Chad Calvert <calvert1212@gmail.com>
 .SH SEE ALSO
 man shell
