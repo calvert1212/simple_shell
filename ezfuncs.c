@@ -26,7 +26,7 @@ char *_strcp(char *strin)
  * *_strcpy - copies source string to dest string
  * @dest: the destination string
  * @src: the source string
- * Return: Pointer to destination string
+ * Return: Pointer to the destination string
  */
 
 char *_strcpy(char *dest, char *src)
