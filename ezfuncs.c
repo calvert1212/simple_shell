@@ -1,7 +1,7 @@
 #include "headers.h"
 
 /**
- * _strcp - creates copy of a string
+ * _strcp - creates a copy of a string
  * @strin: input string
  * Return: copy of string
  */
