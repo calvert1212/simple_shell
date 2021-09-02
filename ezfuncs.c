@@ -2,7 +2,7 @@
 
 /**
  * _strcp - creates a copy of a string
- * @strin: input string
+ * @strin: the input string
  * Return: copy of string
  */
 char *_strcp(char *strin)
