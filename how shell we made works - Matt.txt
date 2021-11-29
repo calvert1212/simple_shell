@@ -1,0 +1,25 @@
+HOW THE SHELL WE MADE WORKS:
+---------------------------------------
+
+1st: checks if using interactive mode
+	determines if printes prompt immediately or wait
+
+2: Takes the string from the input, and changes it from from a FILE to a STRING , uses spaces to delimiter it, saves it as a list of arguements (basically an array / library of arguements). 
+	- checks arguement 0, if not valid value might exist
+	- if looks through bin dir, andn finds the executable like ls or bash, and doesnt find a built in function, it then checks to see if input is custom function
+	- SIGINT is like step 2, signal interrupt that specifc ctrl+c sequence aka ^C
+
+3. big while loop where everything happens,
+	- we use an integer for the exit code
+	- that gets set depending on when it forks certain built ins it will change the exit code etc
+	- then we signal interrupt to stop the ^C / SIGINT command 
+	- we take the input, turn it into a string, tokenize the string, once tokenize save as an array of arguements 
+	- edge case checks
+
+
+4. we use string compare to see if argument 0 is exit or not.
+	- if is, we exit (goes for ALL of our custom functions)
+		- if it is env it printenv's 
+			- if isnt custom function we find built in path to the executable binary 
+
+5. Currently, No commands work, it is a skeleton of a shell, but it is a shell nonetheless. WIP.
