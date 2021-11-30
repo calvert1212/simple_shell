@@ -10,8 +10,9 @@ int main(int argc, char **argv)
 
     do
     {
+      if (isatty(STDIN_FILENO))
         print_prompt1();
-//sigint ctrl^c here
+      signal(SIGINT, stopcc);
 //check if interactive mode here
         cmd = read_cmd();
 
