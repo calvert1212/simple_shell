@@ -11,7 +11,8 @@ int main(int argc, char **argv)
     do
     {
         print_prompt1();
-
+//sigint ctrl^c here
+//check if interactive mode here
         cmd = read_cmd();
 
         if(!cmd)
@@ -24,21 +25,23 @@ int main(int argc, char **argv)
             free(cmd);
             continue;
         }
-
+//handle bin here
         if(strcmp(cmd, "exit\n") == 0)
         {
             free(cmd);
             break;
         }
+        //custom functions here
 
         printf("%s\n", cmd);
 
         free(cmd);
 
     } while(1);
-
+//have to handle special exit codes as well
     exit(EXIT_SUCCESS);
 }
+//we probably need to rehash read_cmd to tokenize input. Also should be separate file
 char *read_cmd(void)
 {
     char buf[1024];
