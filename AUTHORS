@@ -1,1 +1,6 @@
-Simple Shell Project created by Chad Calvert, Matt Hill, and Christopher Shrier
+# This file lists all individuals having contributed content to the repository.
+# For how it is generated, see 'hack/generate-authors.sh'.
+
+Chad Calvert <1834@holbertonschool.com>
+Matt Hill <STUDENT@EMAIL.COM>
+Christopher Shrier <STUDENT@EMAIL.COM>
