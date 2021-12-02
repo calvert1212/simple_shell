@@ -44,5 +44,7 @@ char *_strindup(char *s1, int dex);
 void pfind(char **array);
 int exec(char **array);
 char *genv(char *envar);
+int _strincmp(char *s1, char *s2, int x);
+void penv(void);
 
 #endif

@@ -1,12 +1,12 @@
 #include "shell.h"
 
-void _stopcc(int sig)
+void stopcc(int sig)
 {
   (void) sig;
   write(STDOUT_FILENO, "\n$ ", 3);
 }
 
-char *_strindup(cha *s1, int dex)
+char *_strindup(char *s1, int dex)
 {
   int i = 0;
   int l = 1;

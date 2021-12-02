@@ -6,7 +6,7 @@
 
 int main(void)
 {
-  char **arr, *cmd;
+  char **arr, *cmd = NULL;
   size_t n = 0;
   ssize_t strin = 0;
   int ecode = 0, i;
@@ -15,9 +15,9 @@ int main(void)
     {
       i = 0;
       if (isatty(STDIN_FILENO))
-	prompt;
+	write(STDOUT_FILENO, "$ ", 2);
       signal(SIGINT, stopcc);
-      cmd = getline(&cmd, &n, stdin);
+      strin = getline(&cmd, &n, stdin);
       if (strin == EOF)
 	break;
       cmd[strin - 1] = '\0';
@@ -32,14 +32,14 @@ int main(void)
             free(cmd);
             continue;
         }
-        if (strincmp(arr[0], "exit") == 0)
+        if (strcmp(arr[0], "exit") == 0)
         {
 	  while (arr[i])
             free(arr[i++]);
 	  free(arr);
 	  break;
         }
-	if (strincmp(arr[0], "env") == 0)
+	if (strcmp(arr[0], "env") == 0)
 	  {
 	    penv();
 	    while (arr[i])

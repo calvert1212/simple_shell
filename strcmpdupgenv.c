@@ -44,7 +44,7 @@ char *genv(char *envar)
     x++;
   if (environ[x])
     {
-      envs = strdup(environ[x], l + 1);
+      envs = _strindup(environ[x], l + 1);
       return (envs);
     }
   return (NULL);

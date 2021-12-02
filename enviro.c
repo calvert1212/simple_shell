@@ -8,11 +8,11 @@ char *enviro(char *envar)
 
   if (!environ || !*envar)
     return (NULL);
-  while (environ[x] && (_strcmp(envar, environ[x], l)))
+  while (environ[x] && (_strincmp(envar, environ[x], l)))
     x++;
   if (environ[x])
     {
-      envs = _strdup(environ[x], l + 1);
+      envs = _strindup(environ[x], l + 1);
       return (envs);
     }
   return (NULL);
