@@ -1,0 +1,57 @@
+.TH SIMPLE_SHELL "1" "December 2021" "simple_shell Manual"
+             _           _ _               _
+             | |__   ___ | | |__   __ _ ___| |__
+             | '_ ) / _ )| | '_ ) / _` / __| '_ )
+             | | | | (_) | | |_) | (_| \__ \ | | 1 1
+             |_| |_| ___/|_|_.__/ (__,_|___/_| |_|
+
+.SH NAME
+.B simple_shell \- A Simple Shell Holberton Project
+
+.SH SYNOPSIS
+.B ./hsh
+.PP
+
+.SH Description
+A simplified CLI, akin to any other standard Linux shell. Can run in interactive and non-interactive mode. Non-interactive mode enables scripting and pipes.
+
+.SH OVERVIEW
+simple_shell takes, pipes, interprets and executes commands from files and the command line.
+
+.SH USAGE
+IT IS RECOMMENDED THE USER MAKES SURE THEY HAVE THE GNU COMPILER COLLECTION OR EQUIVALENT BEFORE ATTEMPTING TO RUN!
+To compile and run simple_shell, please enter the following into your existing shell:
+.P
+.RS
+.B gcc -Wall -Werror -Wextra -pedantic *.c -o hsh
+.P
+.RE
+After compilation, simply enter the following to run holbash:
+.P
+.RS
+.B ./hsh
+.P
+.RE
+This will begin your simple_shell session. To end your session, enter the command 'exit' or press 'Ctrl+D' or 'Ctrl+Z'. 'Ctrl+C' functionality IS DISABLED.
+Non-interactive mode is also supported, along with piping and scripting. Please refer to 'man sh' for more information on this type of functionality!
+.SH BUILTINS
+.P
+.RS
+.B  env
+- Writes environmental variables to output
+.P
+.B  exit
+- Replaces Ctrl+C, terminates holbash
+.PP
+.P
+.B #
+- User can add comments after typing '#'
+
+.SH BUGS
+None, less functionality than a normal shell
+.SH AUTHORS
+Chad Calvert <1839@holbertonschool.com>
+Matt Hill <>
+Mikey Shrier <>
+.SH SEE ALSO
+man shell
