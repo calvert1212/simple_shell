@@ -6,7 +6,7 @@
  * Return: void
  */
 
-void print_prompt1(void)
+void prompt(void)
 {
   write(STDOUT_FILENO, "$ ", 2);
 }

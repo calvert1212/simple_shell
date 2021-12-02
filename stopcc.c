@@ -1,13 +1,29 @@
-#include "holberton.h"
+#include "shell.h"
 
-/**
- * _stopcc - Stops exit on Ctrl C
- * @sig: Signal number
- * Description: Prevents Ctrl C exit
- * Return: None
- */
 void _stopcc(int sig)
 {
   (void) sig;
   write(STDOUT_FILENO, "\n$ ", 3);
+}
+
+char *_strindup(cha *s1, int dex)
+{
+  int i = 0;
+  int l = 1;
+  char *s2;
+
+  if (s1 == NULL)
+    return (NULL);
+  l = _strlen(s1) - dex;
+  s2 = malloc((sizeof(char) * (l + 1)));
+  if (s2 == NULL)
+    return (NULL);
+  while (i < l)
+    {
+      s2[i] = s1[dex];
+      i++;
+      dex++;
+    }
+  s2[i] = '\0';
+  return (s2);
 }

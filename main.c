@@ -4,96 +4,54 @@
 #include <string.h>
 #include "shell.h"
 
-int main(int argc, char **argv)
+int main(void)
 {
-    char *cmd;
-
-    do
+  char **arr, *cmd;
+  size_t n = 0;
+  ssize_t strin = 0;
+  int ecode = 0, i;
+    
+  do
     {
+      i = 0;
       if (isatty(STDIN_FILENO))
-        print_prompt1();
+	prompt;
       signal(SIGINT, stopcc);
-//check if interactive mode here
-        cmd = read_cmd();
-
-        if(!cmd)
+      cmd = getline(&cmd, &n, stdin);
+      if (strin == EOF)
+	break;
+      cmd[strin - 1] = '\0';
+      arr = delim(cmd, " ");
+        if(arr == NULL)
         {
-            exit(EXIT_SUCCESS);
+	  continue;
         }
 
-        if(cmd[0] == '\0' || strcmp(cmd, "\n") == 0)
+        if(strcmp(arr[0], "\n") == 0)
         {
             free(cmd);
             continue;
         }
-//handle bin here
-        if(strcmp(cmd, "exit\n") == 0)
+        if (strincmp(arr[0], "exit") == 0)
         {
-            free(cmd);
-            break;
+	  while (arr[i])
+            free(arr[i++]);
+	  free(arr);
+	  break;
         }
-        //custom functions here
-
-        printf("%s\n", cmd);
-
-        free(cmd);
-
+	if (strincmp(arr[0], "env") == 0)
+	  {
+	    penv();
+	    while (arr[i])
+	      free(arr[i++]);
+	    free(arr);
+	    continue;
+	  }
+	pfind(arr), ecode = exec(arr);
+	while (arr[i])
+	  free(arr[i++]);
+        free(arr);
     } while(1);
-//have to handle special exit codes as well
-    exit(EXIT_SUCCESS);
-}
-//we probably need to rehash read_cmd to tokenize input. Also should be separate file
-char *read_cmd(void)
-{
-    char buf[1024];
-    char *ptr = NULL;
-    char ptrlen = 0;
-
-    while(fgets(buf, 1024, stdin))
-    {
-        int buflen = strlen(buf);
-
-        if(!ptr)
-        {
-            ptr = malloc(buflen+1);
-        }
-        else
-        {
-            char *ptr2 = realloc(ptr, ptrlen+buflen+1);
-
-            if(ptr2)
-            {
-                ptr = ptr2;
-            }
-            else
-            {
-                free(ptr);
-                ptr = NULL;
-            }
-        }
-
-        if(!ptr)
-        {
-            fprintf(stderr, "error: failed to alloc buffer: %s\n", strerror(errno));
-            return NULL;
-        }
-
-        strcpy(ptr+ptrlen, buf);
-
-        if(buf[buflen-1] == '\n')
-        {
-            if(buflen == 1 || buf[buflen-2] != '\\')
-            {
-                return ptr;
-            }
-
-            ptr[ptrlen+buflen-2] = '\0';
-            buflen -= 2;
-            print_prompt2();
-        }
-
-        ptrlen += buflen;
-    }
-
-    return ptr;
+  free(cmd);
+return(ecode);
 }
