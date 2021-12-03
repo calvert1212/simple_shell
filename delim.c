@@ -24,9 +24,9 @@ char **delim(char *cm, char *del)
 	} while (pch != NULL);
 	while (i < l)
 	{
-		if (cm[i] == '\0')
-			cm[i] = del[0];
-			i++;
+	if (cm[i] == '\0')
+	cm[i] = del[0];
+	i++;
 	}
 	i = 0;
 	arr = malloc(sizeof(char *) * (c + 1));

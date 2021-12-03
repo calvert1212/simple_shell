@@ -18,9 +18,9 @@ char *_strcp(char *strin)
 	if (strout == NULL)
 		return (NULL);
 	for (; x < l; x++)
-		strout[x] = strin[x];
-		strout[x] = '\0';
-		return (strout);
+	strout[x] = strin[x];
+	strout[x] = '\0';
+	return (strout);
 }
 
 /**

@@ -17,34 +17,34 @@ int main(void)
 	do {
 	i = 0;
 	if (isatty(STDIN_FILENO))
-		write(STDOUT_FILENO, "$ ", 2);
-		signal(SIGINT, stopcc);
-		strin = getline(&cmd, &n, stdin);
+	write(STDOUT_FILENO, "$ ", 2);
+	signal(SIGINT, stopcc);
+	strin = getline(&cmd, &n, stdin);
 	if (strin == EOF)
-		break;
-		cmd[strin - 1] = '\0';
-		arr = delim(cmd, " ");
+	break;
+	cmd[strin - 1] = '\0';
+	arr = delim(cmd, " ");
 	if (arr == NULL)
-		continue;
+	continue;
 	if (strcmp(arr[0], "exit") == 0)
 	{
-		while (arr[i])
-			free(arr[i++]);
-			free(arr);
-		break;
+	while (arr[i])
+	free(arr[i++]);
+	free(arr);
+	break;
 	}
 	if (strcmp(arr[0], "env") == 0)
 	{
-		penv();
-		while (arr[i])
-			free(arr[i++]);
-			free(arr);
-		continue;
+	penv();
+	while (arr[i])
+	free(arr[i++]);
+	free(arr);
+	continue;
 	}
 	pfind(arr), ecode = exec(arr);
 	while (arr[i])
-		free(arr[i++]);
-		free(arr);
+	free(arr[i++]);
+	free(arr);
 	} while (1);
 	free(cmd);
 	return (ecode);

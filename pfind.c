@@ -30,10 +30,10 @@ void pfind(char **array)
 		free(array[0]);
 		array[0] = _strdup(string);
 	for (i = 0; path[i] != NULL; i++)
-		free(path[i]);
-		free(path);
-		free(string);
-		return;
+	free(path[i]);
+	free(path);
+	free(string);
+	return;
 	}
 	i++;
 	free(string);
