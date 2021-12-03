@@ -1,9 +1,8 @@
 #include "shell.h"
 
 /**
- * pfind -
- * @array:
- * Return:
+ * pfind - Handles the PATH
+ * @array: input string
  */
 
 void pfind(char **array)

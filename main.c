@@ -5,8 +5,8 @@
 #include "shell.h"
 
 /**
- * main -
- * Return:
+ * main - main function for the shell
+ * Return: 0
  */
 
 int main(void)
@@ -44,7 +44,7 @@ int main(void)
 	}
 	if (strcmp(arr[0], "env") == 0)
 	{
-			penv();
+		penv();
 		while (arr[i])
 			free(arr[i++]);
 			free(arr);

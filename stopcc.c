@@ -1,8 +1,8 @@
 #include "shell.h"
 
 /**
- * stopcc -
- * @sig:
+ * stopcc - Stops Ctrl + C exit
+ * @sig: signal interrupt
  * Return: void
  */
 
@@ -13,10 +13,10 @@ void stopcc(int sig)
 }
 
 /**
- * _strindup -
- * @s1:
- * @dex:
- * Return:
+ * _strindup - Function that duplicates a string
+ * @s1: string to duplicate
+ * @dex: length of string
+ * Return: Duplicated string
  */
 
 char *_strindup(char *s1, int dex)

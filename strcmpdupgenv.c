@@ -1,10 +1,10 @@
 #include "shell.h"
 
 /**
- * _strcmp -
- * @s1:
- * @s2:
- * Return:
+ * _strcmp - Function that compares the ASCII values of string(s)
+ * @s1: string one
+ * @s2: string two
+ * Return: difference
  */
 
 int _strcmp(char *s1, char *s2)
@@ -19,9 +19,9 @@ int _strcmp(char *s1, char *s2)
 }
 
 /**
- * _strdup -
- * @s1:
- * Return:
+ * _strdup - Duplicates a string
+ * @s1: string to be duplicated
+ * Return: duplicated string
  */
 
 char *_strdup(char *s1)
@@ -46,9 +46,9 @@ char *_strdup(char *s1)
 }
 
 /**
- * genv -
- * @envar:
- * Return:
+ * genv - Get environment funciton
+ * @envar: environment variable
+ * Return: Environment variable
  */
 
 char *genv(char *envar)

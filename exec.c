@@ -1,9 +1,9 @@
 #include "shell.h"
 
 /**
- * exec -
- * @array:
- * Return:
+ * exec - forks child process function
+ * @array: command from user
+ * Return: exit code of the command
  */
 
 int exec(char **array)

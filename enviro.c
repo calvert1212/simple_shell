@@ -1,9 +1,9 @@
 #include "shell.h"
 
 /**
- * enviro -
- * @envar:
- * Return:
+ * enviro - Function to return the environment global
+ * @envar: global variable
+ * Return: PATH to evironment variable or NULL on fialure
  */
 
 char *enviro(char *envar)

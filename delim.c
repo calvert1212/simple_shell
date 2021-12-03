@@ -1,10 +1,10 @@
 #include "shell.h"
 
 /**
- * delim -
- * @cm:
- * @del:
- * Return:
+ * delim - function to delimate and tokenize a string
+ * @cm: string to delimate
+ * @del: delimating character
+ * Return: tokenized delimated string
  */
 
 char **delim(char *cm, char *del)

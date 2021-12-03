@@ -1,9 +1,9 @@
 #include "shell.h"
 
 /**
- * _strlen -
- * @s:
- * Return:
+ * _strlen - function that finds the length of a string
+ * @s: string to use
+ * Return: length of string
  */
 
 int _strlen(char *s)
@@ -16,7 +16,7 @@ int _strlen(char *s)
 }
 
 /**
- * _print_env -
+ * _print_env - Prints the Environment function
  * Return: void
  */
 

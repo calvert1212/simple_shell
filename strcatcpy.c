@@ -1,9 +1,9 @@
 #include "shell.h"
 
 /**
- * _strcp -
- * @strin:
- * Return:
+ * _strcp - Function that copies a string
+ * @strin: string to be copied
+ * Return: Copied string
  */
 
 char *_strcp(char *strin)
@@ -24,10 +24,10 @@ char *_strcp(char *strin)
 }
 
 /**
- * _strcpy -
- * @dest:
- * @src:
- * Return:
+ * _strcpy - Copies source string to a destination string
+ * @dest: Destination string
+ * @src: Source string
+ * Return: destination
  */
 
 char *_strcpy(char *dest, char *src)
@@ -44,10 +44,10 @@ char *_strcpy(char *dest, char *src)
 }
 
 /**
- * _strcat -
- * @dest:
- * @src:
- * Return:
+ * _strcat - Function that concatonates source string to destination string
+ * @dest: destination string
+ * @src: source string
+ * Return: destination
  */
 
 char *_strcat(char *dest, char *src)
