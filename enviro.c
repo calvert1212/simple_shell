@@ -10,7 +10,7 @@ char *enviro(char *envar)
 {
 	int x = 0;
 	size_t l = _strlen(envar);
-	char *envs:
+	char *envs;
 
 	if (!environ || !*envar)
 		return (NULL);
