@@ -51,7 +51,7 @@ Non-interactive mode is also supported, along with piping and scripting. Please 
 None, less functionality than a normal shell
 .SH AUTHORS
 Chad Calvert <1839@holbertonschool.com>
-Matt Hill <>
-Mikey Shrier <>
+Matt Hill <3452@holbertonschool.com>
+Mikey Shrier <3253@holbertonschool.com>
 .SH SEE ALSO
 man shell
