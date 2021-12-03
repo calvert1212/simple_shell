@@ -2,11 +2,11 @@
 #include "shell.h"
 
 /**
- * print_prompt1 - writes prompt
+ * prompt - writes prompt
  * Return: void
  */
 
 void prompt(void)
 {
-  write(STDOUT_FILENO, "$ ", 2);
+	write(STDOUT_FILENO, "$ ", 2);
 }
