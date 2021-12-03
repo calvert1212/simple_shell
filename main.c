@@ -1,7 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <errno.h>
-#include <string.h>
 #include "shell.h"
 
 /**
@@ -27,14 +25,7 @@ int main(void)
 		cmd[strin - 1] = '\0';
 		arr = delim(cmd, " ");
 	if (arr == NULL)
-	{
 		continue;
-	}
-	if (strcmp(arr[0], "\n") == 0)
-	{
-		free(cmd);
-		continue;
-	}
 	if (strcmp(arr[0], "exit") == 0)
 	{
 		while (arr[i])
