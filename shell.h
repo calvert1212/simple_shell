@@ -25,8 +25,8 @@ extern char **environ;
 
 typedef struct binType
 {
-  char *binName;
-  int (*func)();
+char *binName;
+int (*func)();
 } binType;
 
 void prompt(void);
